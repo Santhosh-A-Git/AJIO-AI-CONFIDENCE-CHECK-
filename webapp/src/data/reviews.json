@@ -1,0 +1,32 @@
+[
+  {
+    "review_id": "R001",
+    "product_id": "P001",
+    "rating": 5,
+    "review_text": "Absolutely love this jacket. The fit is perfect and the denim feels premium.",
+    "fit_comment": "True to size. I ordered a Medium and it fits exactly like a Medium should.",
+    "quality_comment": "Excellent material quality, stitching is solid.",
+    "delivery_comment": "Arrived in 2 days, very fast.",
+    "recommendation_comment": "Highly recommended for autumn wear."
+  },
+  {
+    "review_id": "R002",
+    "product_id": "P002",
+    "rating": 4,
+    "review_text": "Great shoes, look very premium, but took a few days to break in.",
+    "fit_comment": "Snug fit. If you have wide feet, consider sizing up by 1 size.",
+    "quality_comment": "Leather is authentic and feels durable.",
+    "delivery_comment": "Delivered on time.",
+    "recommendation_comment": "Great for casual or smart-casual wear."
+  },
+  {
+    "review_id": "R003",
+    "product_id": "P003",
+    "rating": 5,
+    "review_text": "Looks way more expensive than it actually is. The dial is stunning.",
+    "fit_comment": "Dial is perfect size, not too bulky. Strap has plenty of holes.",
+    "quality_comment": "Glass doesn't scratch easily, keeping time perfectly.",
+    "delivery_comment": "Super fast next-day delivery.",
+    "recommendation_comment": "A perfect gift."
+  }
+]

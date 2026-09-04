@@ -1,0 +1,103 @@
+[
+  {
+    "product_id": "P001",
+    "product_name": "Slim Fit Denim Jacket",
+    "category": "Clothing",
+    "price": 2499,
+    "material": "100% Cotton Denim",
+    "brand": "DENIM CO",
+    "image_url": "https://images.unsplash.com/photo-1544441893-675973e31985?w=600&auto=format&fit=crop&q=60",
+    "size_chart": {
+      "S": "Chest 38\", Length 25\"",
+      "M": "Chest 40\", Length 26\"",
+      "L": "Chest 42\", Length 27\"",
+      "XL": "Chest 44\", Length 28\""
+    },
+    "delivery_information": "Usually delivers in 3-5 business days. Ships from Bangalore.",
+    "return_information": "15-day return window. Item must be unworn with tags attached.",
+    "in_wishlist": true
+  },
+  {
+    "product_id": "P002",
+    "product_name": "Premium Leather Sneakers",
+    "category": "Footwear",
+    "price": 4999,
+    "material": "Genuine Leather Upper, Rubber Sole",
+    "brand": "URBAN KICKS",
+    "image_url": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&auto=format&fit=crop&q=60",
+    "size_chart": {
+      "UK 7": "Foot Length 25.4 cm",
+      "UK 8": "Foot Length 26.2 cm",
+      "UK 9": "Foot Length 27.1 cm",
+      "UK 10": "Foot Length 27.9 cm"
+    },
+    "delivery_information": "Usually delivers in 2-4 business days. Ships from Mumbai.",
+    "return_information": "30-day return window. Shoes must not show outdoor wear.",
+    "in_wishlist": true
+  },
+  {
+    "product_id": "P003",
+    "product_name": "Minimalist Chronograph Watch",
+    "category": "Watches",
+    "price": 7999,
+    "material": "Stainless Steel Case, Genuine Leather Strap",
+    "brand": "TIMEPIECE PRO",
+    "image_url": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=600&auto=format&fit=crop&q=60",
+    "size_chart": {
+      "Dial Diameter": "42mm",
+      "Strap Width": "20mm"
+    },
+    "delivery_information": "Usually delivers in 1-2 business days. Express shipping included.",
+    "return_information": "15-day return window. Protective films must remain intact.",
+    "in_wishlist": true
+  },
+  {
+    "product_id": "P004",
+    "product_name": "Classic Aviator Sunglasses",
+    "category": "Accessories",
+    "price": 1999,
+    "material": "Metal Frame, Polarized Lenses",
+    "brand": "SUNNY SHADES",
+    "image_url": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&auto=format&fit=crop&q=60",
+    "size_chart": {
+      "Lens Width": "58mm",
+      "Bridge Width": "14mm"
+    },
+    "delivery_information": "Usually delivers in 2-3 business days.",
+    "return_information": "10-day return window. Must include original case.",
+    "in_wishlist": false
+  },
+  {
+    "product_id": "P005",
+    "product_name": "Essential Cotton Crew T-Shirt",
+    "category": "Clothing",
+    "price": 899,
+    "material": "100% Organic Cotton",
+    "brand": "BASICS PLUS",
+    "image_url": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&auto=format&fit=crop&q=60",
+    "size_chart": {
+      "S": "Chest 38\", Length 27\"",
+      "M": "Chest 40\", Length 28\"",
+      "L": "Chest 42\", Length 29\"",
+      "XL": "Chest 44\", Length 30\""
+    },
+    "delivery_information": "Usually delivers in 4-6 business days.",
+    "return_information": "15-day return window. Unwashed only.",
+    "in_wishlist": false
+  },
+  {
+    "product_id": "P006",
+    "product_name": "Designer Leather Tote Bag",
+    "category": "Accessories",
+    "price": 6499,
+    "material": "Vegan Leather",
+    "brand": "CARRY ON",
+    "image_url": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&auto=format&fit=crop&q=60",
+    "size_chart": {
+      "Dimensions": "15\" W x 11\" H x 5\" D"
+    },
+    "delivery_information": "Usually delivers in 3-5 business days.",
+    "return_information": "15-day return window. Dust bag must be returned.",
+    "in_wishlist": false
+  }
+]

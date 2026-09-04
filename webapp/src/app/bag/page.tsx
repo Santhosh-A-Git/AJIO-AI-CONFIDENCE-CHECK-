@@ -26,7 +26,7 @@ export default function BagPage() {
       {bagProducts.length === 0 ? (
         <div style={{ padding: '3rem', textAlign: 'center', background: 'var(--surface)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border)' }}>
           <p style={{ fontSize: '1.25rem', color: 'var(--text-muted)', marginBottom: '2rem' }}>Your cart is empty.</p>
-          <Link href="/catalog">
+          <Link href="/">
             <button className="pill-button" style={{ fontSize: '1rem', padding: '1rem 2rem' }}>Start Shopping</button>
           </Link>
         </div>

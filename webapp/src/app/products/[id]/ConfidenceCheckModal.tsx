@@ -244,7 +244,7 @@ export default function ConfidenceCheckModal({ productId }: { productId: string 
                         removeFromWishlist(productId);
                         setIsOpen(false);
                         showToast('Removed from Wishlist');
-                        router.push('/');
+                        router.push('/wishlist');
                       }} 
                       style={{ flex: 1, padding: '1rem', background: 'transparent', border: '1px solid #ff6b6b', color: '#ff6b6b', borderRadius: 'var(--radius-sm)', fontWeight: 600, cursor: 'pointer' }}
                     >

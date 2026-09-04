@@ -7,8 +7,8 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   const navItems = [
-    { name: "🔍 BROWSE CATALOG", path: "/catalog" },
-    { name: "♡ MY WISHLIST", path: "/" },
+    { name: "🔍 BROWSE CATALOG", path: "/" },
+    { name: "♡ MY WISHLIST", path: "/wishlist" },
     { name: "🛍️ CART ITEMS", path: "/bag" },
   ];
 

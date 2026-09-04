@@ -1,11 +1,20 @@
+"use client";
+import { useState, useEffect } from 'react';
 import { useWishlist } from '@/context/WishlistContext';
 import { useToast } from '@/context/ToastContext';
 
 export default function AddToWishlistButton({ productId }: { productId: string }) {
   const { isInWishlist, addToWishlist, removeFromWishlist } = useWishlist();
   const { showToast } = useToast();
+  const [mounted, setMounted] = useState(false);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  
   const inList = isInWishlist(productId);
+
+  if (!mounted) return <div style={{ height: '54px' }} />;
 
   return (
     <button

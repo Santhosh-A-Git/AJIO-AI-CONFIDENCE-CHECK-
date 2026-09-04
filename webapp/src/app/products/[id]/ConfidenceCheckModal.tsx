@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useBag } from '@/context/BagContext';
 import { useWishlist } from '@/context/WishlistContext';
@@ -28,7 +28,13 @@ export default function ConfidenceCheckModal({ productId }: { productId: string 
   const { addToBag } = useBag();
   const { isInWishlist, removeFromWishlist } = useWishlist();
   const { showToast } = useToast();
+  const [mounted, setMounted] = useState(false);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
   if (!isInWishlist(productId)) return null;
 
   const handleCheck = async (concern_type: string) => {

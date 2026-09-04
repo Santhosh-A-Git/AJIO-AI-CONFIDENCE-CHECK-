@@ -5,8 +5,8 @@ import AddToWishlistButton from './AddToWishlistButton';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
-export default function ProductPage({ params }: { params: { id: string } }) {
-  const { id } = params;
+export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   const product = productsData.find((p) => p.product_id === id);
 
   if (!product) {

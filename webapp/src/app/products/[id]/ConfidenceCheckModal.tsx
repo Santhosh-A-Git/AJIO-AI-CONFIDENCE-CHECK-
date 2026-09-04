@@ -37,10 +37,11 @@ export default function ConfidenceCheckModal({ productId }: { productId: string 
   if (!mounted) return null;
   if (!isInWishlist(productId)) return null;
 
-  const handleCheck = async (concern_type: string) => {
+  const handleCheck = async (concern_type: string, fullQuestion: string) => {
     setLoading(true);
     setResult(null);
-    setChatHistory([{ role: 'user', content: concern_type }]);
+    setChatInput(fullQuestion);
+    setChatHistory([{ role: 'user', content: fullQuestion }]);
     try {
       const res = await fetch('/api/confidence-check', {
         method: 'POST',
@@ -129,9 +130,9 @@ export default function ConfidenceCheckModal({ productId }: { productId: string 
               </h2>
               
               <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
-                <button className="pill-button" onClick={() => handleCheck('Fit & Size')}>Does this fit true to size?</button>
-                <button className="pill-button" onClick={() => handleCheck('Quality & Material')}>How is the material quality?</button>
-                <button className="pill-button" onClick={() => handleCheck('Brand Trust')}>Is this a trustworthy purchase?</button>
+                <button className="pill-button" onClick={() => handleCheck('Fit & Size', 'Does this fit true to size?')}>Does this fit true to size?</button>
+                <button className="pill-button" onClick={() => handleCheck('Quality & Material', 'How is the material quality?')}>How is the material quality?</button>
+                <button className="pill-button" onClick={() => handleCheck('Brand Trust', 'Is this a trustworthy purchase?')}>Is this a trustworthy purchase?</button>
               </div>
 
               {/* Chat Input / Ask AI */}

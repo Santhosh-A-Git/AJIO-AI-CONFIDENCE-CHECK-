@@ -18,7 +18,7 @@ export default function WishlistPage() {
   const wishlistProducts = items.map(id => productsData.find(p => p.product_id === id)).filter(Boolean) as typeof productsData;
 
   return (
-    <div style={{ padding: '3rem 4rem', maxWidth: '1200px' }}>
+    <div style={{ padding: 'var(--page-padding-y) var(--page-padding-x)', maxWidth: '1200px' }}>
       <h1 style={{ color: 'var(--primary)', fontSize: '2.5rem', fontWeight: 700, marginBottom: '0.5rem' }}>My Wishlist</h1>
       <p style={{ color: 'var(--foreground)', marginBottom: '3rem' }}>Review your saved items and run an AI Confidence Check before you buy.</p>
       
@@ -44,7 +44,11 @@ export default function WishlistPage() {
             onMouseOut={(e) => e.currentTarget.style.borderColor = 'var(--border)'}>
               <div style={{ 
                 height: '350px', 
-                background: `url(${product.image_url}) center/cover no-repeat` 
+                backgroundColor: 'var(--image-fallback)',
+                backgroundImage: `url(${product.image_url})`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
               }} />
               <div style={{ padding: '1.5rem' }}>
                 <h3 style={{ fontSize: '0.875rem', color: 'var(--primary)', marginBottom: '0.25rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>

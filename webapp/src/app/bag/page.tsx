@@ -19,7 +19,7 @@ export default function BagPage() {
   const total = bagProducts.reduce((acc, curr) => acc + curr.price, 0);
 
   return (
-    <div style={{ padding: '3rem 4rem', maxWidth: '800px' }}>
+    <div style={{ padding: 'var(--page-padding-y) var(--page-padding-x)', maxWidth: '800px' }}>
       <h1 style={{ color: 'var(--primary)', fontSize: '2.5rem', fontWeight: 700, marginBottom: '0.5rem' }}>Cart Items</h1>
       <p style={{ color: 'var(--foreground)', marginBottom: '3rem' }}>Review your items before proceeding to checkout.</p>
       
@@ -34,7 +34,14 @@ export default function BagPage() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           {bagProducts.map(product => (
             <div key={product.product_id} style={{ display: 'flex', gap: '2rem', padding: '1.5rem', background: 'var(--surface)', borderRadius: 'var(--radius-md)', border: '1px solid var(--border)', alignItems: 'center' }}>
-              <div style={{ width: '100px', height: '100px', borderRadius: 'var(--radius-sm)', background: `url(${product.image_url}) center/cover no-repeat` }} />
+              <div style={{ 
+                width: '100px', height: '100px', borderRadius: 'var(--radius-sm)', 
+                backgroundColor: 'var(--image-fallback)',
+                backgroundImage: `url(${product.image_url})`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat'
+              }} />
               <div style={{ flex: 1 }}>
                 <h3 style={{ fontSize: '0.875rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>{product.brand}</h3>
                 <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--foreground)', margin: '0.25rem 0' }}>{product.product_name}</h2>

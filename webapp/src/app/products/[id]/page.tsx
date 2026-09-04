@@ -14,18 +14,22 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
   }
 
   return (
-    <div style={{ padding: '3rem 4rem', maxWidth: '1200px' }}>
+    <div style={{ padding: 'var(--page-padding-y) var(--page-padding-x)', maxWidth: '1200px' }}>
       <Link href="/" style={{ display: 'inline-block', marginBottom: '2rem', color: 'var(--primary)', fontWeight: 600 }}>
         &larr; Back to Catalog
       </Link>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem' }}>
+      <div className="mobile-grid-collapse" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem' }}>
         <div style={{
           borderRadius: 'var(--radius-md)',
           overflow: 'hidden',
           height: '600px',
           border: '1px solid var(--border)',
-          background: `url(${product.image_url}) center/cover no-repeat`
+          backgroundColor: 'var(--image-fallback)',
+          backgroundImage: `url(${product.image_url})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat'
         }} />
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>

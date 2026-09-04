@@ -1,12 +1,20 @@
 "use client";
 
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import productsData from '@/data/products.json';
 import { useWishlist } from '@/context/WishlistContext';
 
 export default function WishlistPage() {
   const { items } = useWishlist();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   
+  if (!mounted) return <div style={{ padding: '3rem', color: 'var(--text-muted)' }}>Loading...</div>;
+
   const wishlistProducts = items.map(id => productsData.find(p => p.product_id === id)).filter(Boolean) as typeof productsData;
 
   return (

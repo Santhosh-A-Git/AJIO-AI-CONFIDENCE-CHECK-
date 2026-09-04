@@ -1,11 +1,19 @@
 "use client";
 
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import { useBag } from '@/context/BagContext';
 import productsData from '@/data/products.json';
 
 export default function BagPage() {
   const { items, removeFromBag } = useBag();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return <div style={{ padding: '3rem', color: 'var(--text-muted)' }}>Loading...</div>;
 
   const bagProducts = items.map(id => productsData.find(p => p.product_id === id)).filter(Boolean) as typeof productsData;
   const total = bagProducts.reduce((acc, curr) => acc + curr.price, 0);
